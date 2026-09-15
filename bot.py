@@ -3109,7 +3109,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await gn_cmd_top_users(update, context); return
     if text == "𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿":
         await update.message.reply_text(
-            f'<tg-emoji emoji-id="6235572922086331108">😒</tg-emoji> 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝘽𝙮: <b>Junaid Ali</b>\n\n'
+            f'<tg-emoji emoji-id="6235572922086331108">😒</tg-emoji> 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝘽𝙮: <b>KITE DEVELOPER</b>\n\n'
             f'<tg-emoji emoji-id="6206096153511990389">👑</tg-emoji> 𝙊𝙬𝙣𝙚𝙧: @payment_owner',
             parse_mode="HTML"); return
     if text == "𝗥𝗲𝗳𝗲𝗿𝗿𝗮𝗹":
