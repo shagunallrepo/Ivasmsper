@@ -722,7 +722,7 @@ def format_otp_code(code: str) -> str:
     mid = n // 2
     return code[:mid] + "-" + code[mid:]
 
-def format_number_Junaid_OTP(number: str) -> str:
+def format_number_Kite_OTP(number: str) -> str:
     """Format full number as: 4915511-Junaid-03543"""
     digits = re.sub(r"[^0-9]", "", number)
     if len(digits) >= 12:
@@ -744,7 +744,7 @@ def format_otp_message(number: str, service: str, otp: str,
     country_custom_emoji = get_custom_country_emoji(region)
     app_custom_emoji     = get_app_emoji(service)
 
-    Junaid_OTP_number = format_number_Junaid_OTP(number)
+    Kite_OTP_number = format_number_Kite_OTP(number)
     lang = detect_language_from_text(sms_text) or REGION_LANGUAGE.get(region, "English")
 
     lang_emoji = '<tg-emoji emoji-id="5388632425314140043">🌐</tg-emoji>'
@@ -753,7 +753,7 @@ def format_otp_message(number: str, service: str, otp: str,
         chr(ord(c) + 0x1D400 - ord('A')) if 'A' <= c <= 'Z' else
         chr(ord(c) + 0x1D41A - ord('a')) if 'a' <= c <= 'z' else
         chr(ord(c) + 0x1D7CE - ord('0')) if '0' <= c <= '9' else c
-        for c in Junaid_OTP_number
+        for c in Kite_OTP_number
     )
     base = (f"{country_custom_emoji} ┃ {app_custom_emoji}"
             f"  <b>#{region}</b>  {bold_num}  {lang_emoji}<b>#{lang}</b>")
@@ -1645,7 +1645,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"<tg-emoji emoji-id=\"6204104220694550861\">☄️</tg-emoji> "
         f"<b>Welcome, {name_line}!</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"<tg-emoji emoji-id=\"6205965994528086727\">💠</tg-emoji> <b>Junaid OTP</b>\n\n"
+        f"<tg-emoji emoji-id=\"6205965994528086727\">💠</tg-emoji> <b>Kite OTP</b>\n\n"
         f"<tg-emoji emoji-id=\"5411590687663608498\">⚡️</tg-emoji> Fastest OTP Service in Pakistan\n"
         f"<tg-emoji emoji-id=\"5339267587337370029\">🤖</tg-emoji> Auto-Assign Number System\n"
         f"<tg-emoji emoji-id=\"5352564488258200671\">📡</tg-emoji> Multi-Panel + IVAS Support\n"
@@ -4732,7 +4732,7 @@ async def gn_callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
         from html import escape; first=escape(query.from_user.first_name or "User")
         await query.edit_message_text(
             f"👋 <b>HI {first}</b>\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"💎 <b>Junaid OTP</b>\n⚡ Fastest OTP Service\n"
+            f"💎 <b>Kite OTP</b>\n⚡ Fastest OTP Service\n"
             f"🤖 Auto-Assign System\n\n👆 <b>Select an option:</b>",
             parse_mode="HTML",reply_markup=smart_kb(uid)); return True
 
