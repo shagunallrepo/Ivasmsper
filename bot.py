@@ -1,7 +1,7 @@
 # ╔══════════════════════════════════════════════════════════════╗
 # ║     Junaid OTP Bot — Full System Bot                        ║
 # ║     Numbers + OTP Forwarding + Full Admin Suite             ║
-# ║     Developed by Junaid (@Junaidniz786)                    ║
+# ║     Developed by Junaid (@iamgutts)                    ║
 # ╚══════════════════════════════════════════════════════════════╝
 
 import asyncio
@@ -28,15 +28,15 @@ from telegram.ext import (
 # ═══════════════════════════════════════════════════════════════
 #  CONFIGURATION
 # ═══════════════════════════════════════════════════════════════
-BOT_TOKEN      = "8933245461:AAG8EHAntnbnTskEGhmI0eID4RGJX5feYPs"
+BOT_TOKEN      = "8723446212:AAFKUqN1VeWqDCieC5caquSEdkLx5nIFgxM"
 OWNER_IDS      = [8129003140]
 ADMIN_IDS      = [8129003140]
 OTP_GROUP_LINK = "https://t.me/kiteotp"
-BOT_NAME       = "IVASMS OTP"
+BOT_NAME       = "KITE SMS"
 
 REQUIRED_CHANNELS = []  # Force-join removed
 
-DEV_CONTACT    = "@payment_owner"
+DEV_CONTACT    = "@iamgutts"
 
 DEFAULT_PANELS = {
     "KUMAIL HADI": {
