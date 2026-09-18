@@ -1653,7 +1653,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"<tg-emoji emoji-id=\"6206155797722830770\">💵</tg-emoji> PKR + USDT Withdrawal\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"<tg-emoji emoji-id=\"6206096153511990389\">👑</tg-emoji> <b>Version 7.0</b>  •  "
-        f"<tg-emoji emoji-id=\"6235572922086331108\">🧑‍💻</tg-emoji> Dev: Junaid Ali\n"
+        f"<tg-emoji emoji-id=\"6235572922086331108\">🧑‍💻</tg-emoji> Dev: Alone Warrior\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
         f"👆 <b>Select an option below:</b>"
         f"{admin_note}"
@@ -3110,7 +3110,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if text == "𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿":
         await update.message.reply_text(
             f'<tg-emoji emoji-id="6235572922086331108">😒</tg-emoji> 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝘽𝙮: <b>KITE DEVELOPER</b>\n\n'
-            f'<tg-emoji emoji-id="6206096153511990389">👑</tg-emoji> 𝙊𝙬𝙣𝙚𝙧: @payment_owner',
+            f'<tg-emoji emoji-id="6206096153511990389">👑</tg-emoji> 𝙊𝙬𝙣𝙚𝙧: @iamgutts',
             parse_mode="HTML"); return
     if text == "𝗥𝗲𝗳𝗲𝗿𝗿𝗮𝗹":
         await gn_cmd_referral(update, context); return
