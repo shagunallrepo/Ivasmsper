@@ -723,13 +723,13 @@ def format_otp_code(code: str) -> str:
     return code[:mid] + "-" + code[mid:]
 
 def format_number_Kite_OTP(number: str) -> str:
-    """Format full number as: 4915511-Junaid-03543"""
+    """Format full number as: 4915511-KITE-03543"""
     digits = re.sub(r"[^0-9]", "", number)
     if len(digits) >= 12:
-        return f"{digits[:7]}-Junaid-{digits[-5:]}"
+        return f"{digits[:7]}-KITE-{digits[-5:]}"
     elif len(digits) >= 7:
         mid = len(digits) - 5
-        return f"{digits[:mid]}-Junaid-{digits[-5:]}"
+        return f"{digits[:mid]}-KITE-{digits[-5:]}"
     return digits
 
 def format_otp_message(number: str, service: str, otp: str,
@@ -748,7 +748,7 @@ def format_otp_message(number: str, service: str, otp: str,
     lang = detect_language_from_text(sms_text) or REGION_LANGUAGE.get(region, "English")
 
     lang_emoji = '<tg-emoji emoji-id="5388632425314140043">🌐</tg-emoji>'
-    # Bold Junaid number using Unicode bold chars
+    # Bold Kite number using Unicode bold chars
     bold_num = "".join(
         chr(ord(c) + 0x1D400 - ord('A')) if 'A' <= c <= 'Z' else
         chr(ord(c) + 0x1D41A - ord('a')) if 'a' <= c <= 'z' else
