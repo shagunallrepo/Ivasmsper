@@ -771,6 +771,7 @@ def get_otp_keyboard(number: str, otp: str) -> dict:
     OTP_EMOJI   = "6319056439096644016"
     PHONE_EMOJI = "5282843764451195532"
     CHAT_EMOJI  = "6206497372176913599"
+    BOT_EMOJI = "5330321861949539755"
     if otp:
         clean = re.sub(r"[^0-9]", "", otp)
         otp_row = [{"text": f" {clean}", "icon_custom_emoji_id": OTP_EMOJI,
@@ -782,7 +783,9 @@ def get_otp_keyboard(number: str, otp: str) -> dict:
         [{"text": " 𝗡𝘂𝗺𝗯𝗲𝗿𝘀", "url": "https://t.me/kitenumber",
           "icon_custom_emoji_id": PHONE_EMOJI, "style": "danger"},
          {"text": " 𝗖𝗵𝗮𝘁",    "url": "https://t.me/kitechatt",
-          "icon_custom_emoji_id": CHAT_EMOJI,  "style": "primary"}],
+          "icon_custom_emoji_id": CHAT_EMOJI,  "style": "primary"},
+         {"text": " 𝗕𝗢𝗧",    "url": "https://t.me/kiteotp_bot",
+          "icon_custom_emoji_id": BOT_EMOJI,  "style": "primary"}],
     ]}
 
 # Shared persistent Bot instance
