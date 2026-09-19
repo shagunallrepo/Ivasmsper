@@ -755,15 +755,16 @@ def format_otp_message(number: str, service: str, otp: str,
         chr(ord(c) + 0x1D7CE - ord('0')) if '0' <= c <= '9' else c
         for c in Kite_OTP_number
     )
-    base = (f"{country_custom_emoji} | {app_custom_emoji}\n"
-        f"<b>#{region}</b> {bold_num} {lang_emoji}<b>#{lang}</b>")
+    base = (f"{country_custom_emoji} ┃ {app_custom_emoji}\n"
+            f"  <b>#{region}</b>  {bold_num}  {lang_emoji}<b>#{lang}</b>")
 
-# Always append the truncated raw SMS to make the message body larger
-if sms_text:
-    snippet = sms_text[:120].replace("<", "&lt;").replace(">", "&gt;")
-    base += f"\n\n💬 <code>{snippet}</code>"
+    # If no OTP, append truncated raw SMS
+    if not otp or otp == "N/A":
+        if sms_text:
+            snippet = sms_text[:120].replace("<", "&lt;").replace(">", "&gt;")
+            base += f"\n💬 <code>{snippet}</code>"
 
-return base
+    return base
 
 def get_otp_keyboard(number: str, otp: str) -> dict:
     """Raw dict so icon_custom_emoji_id/style/copy_text survive make_request."""
