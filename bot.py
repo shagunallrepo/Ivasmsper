@@ -1,7 +1,7 @@
 # ╔══════════════════════════════════════════════════════════════╗
 # ║     Junaid OTP Bot — Full System Bot                        ║
 # ║     Numbers + OTP Forwarding + Full Admin Suite             ║
-# ║     Developed by Junaid (@iamgutts)                    ║
+# ║     Developed by Junaid (@iamgutts)                         ║
 # ╚══════════════════════════════════════════════════════════════╝
 
 import asyncio
@@ -779,9 +779,9 @@ def get_otp_keyboard(number: str, otp: str) -> dict:
         otp_row = [{"text": "No OTP Detected", "callback_data": "no_otp"}]
     return {"inline_keyboard": [
         otp_row,
-        [{"text": " 𝗡𝘂𝗺𝗯𝗲𝗿𝘀", "url": "https://t.me/junaidaliniz",
+        [{"text": " 𝗡𝘂𝗺𝗯𝗲𝗿𝘀", "url": "https://t.me/kitenumber",
           "icon_custom_emoji_id": PHONE_EMOJI, "style": "danger"},
-         {"text": " 𝗖𝗵𝗮𝘁",    "url": "https://t.me/+DrBDJM9-nvAyMjRk",
+         {"text": " 𝗖𝗵𝗮𝘁",    "url": "https://t.me/kitechatt",
           "icon_custom_emoji_id": CHAT_EMOJI,  "style": "primary"}],
     ]}
 
@@ -4063,9 +4063,9 @@ async def gn_cmd_join_channels(update: Update, context: ContextTypes.DEFAULT_TYP
         f'<tg-emoji emoji-id="6235373579769222419">➡️</tg-emoji> 𝗦𝘁𝗮𝘆 𝘂𝗽𝗱𝗮𝘁𝗲𝗱 𝘄𝗶𝘁𝗵 𝗼𝘂𝗿 𝗹𝗮𝘁𝗲𝘀𝘁 𝗻𝗲𝘄𝘀!',
         parse_mode="HTML",
         reply_markup=InlineKeyboardMarkup([
-            [bc("𝗡𝘂𝗺𝗯𝗲𝗿𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/junaidaliniz",    style="danger",  icon="6206497372176913599")],
-            [bc("𝗖𝗵𝗮𝘁 𝗚𝗿𝗼𝘂𝗽",        url="https://t.me/+DrBDJM9-nvAyMjRk",   style="success", icon="6206080502651164081")],
-            [bc("𝗢𝗧𝗣 𝗚𝗿𝗼𝘂𝗽",         url="https://t.me/junaidniz110", style="primary", icon="6206508629286196237")],
+            [bc("𝗡𝘂𝗺𝗯𝗲𝗿𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url="https://t.me/kitenumber",    style="danger",  icon="6206497372176913599")],
+            [bc("𝗖𝗵𝗮𝘁 𝗚𝗿𝗼𝘂𝗽",        url="https://t.me/kitechatt",   style="success", icon="6206080502651164081")],
+            [bc("𝗢𝗧𝗣 𝗚𝗿𝗼𝘂𝗽",         url="https://t.me/kiteotp", style="primary", icon="6206508629286196237")],
         ]))
 
 async def gn_cmd_withdraw(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -4838,9 +4838,9 @@ async def gn_callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
             "📣 <b>𝗖𝗹𝗶𝗰𝗸 𝘁𝗼 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀</b> 🎉\n\n➡️ Stay updated!",
             parse_mode="HTML",
             reply_markup=InlineKeyboardMarkup([
-                [bc("𝗡𝘂𝗺𝗯𝗲𝗿𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹",url="https://t.me/junaidaliniz",style="danger",icon="6206497372176913599")],
-                [bc("𝗖𝗵𝗮𝘁 𝗚𝗿𝗼𝘂𝗽",url="https://t.me/+DrBDJM9-nvAyMjRk",style="success",icon="6206080502651164081")],
-                [bc("𝗢𝗧𝗣 𝗚𝗿𝗼𝘂𝗽",url="https://t.me/junaidniz110",style="primary",icon="6206508629286196237")],
+                [bc("𝗡𝘂𝗺𝗯𝗲𝗿𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹",url="https://t.me/kitenumber",style="danger",icon="6206497372176913599")],
+                [bc("𝗖𝗵𝗮𝘁 𝗚𝗿𝗼𝘂𝗽",url="https://t.me/kitechatt",style="success",icon="6206080502651164081")],
+                [bc("𝗢𝗧𝗣 𝗚𝗿𝗼𝘂𝗽",url="https://t.me/kiteotp",style="primary",icon="6206508629286196237")],
                 [bc("𝗕𝗮𝗰𝗸",cb="gn_backmain",style="primary",icon="5255703720078879038")],
             ])); return True
 
